@@ -1,0 +1,97 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>Lamborghini</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.LamborghiniServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Lamborghini</servlet-name>
+    <url-pattern>/lamborghini</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Audi</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.AudiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Audi</servlet-name>
+    <url-pattern>/audi</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AstonMartin</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.AstonMartinServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AstonMartin</servlet-name>
+    <url-pattern>/aston-martin</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Bugatti</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.BugattiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Bugatti</servlet-name>
+    <url-pattern>/bugatti</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Ferrari</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.FerrariServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ferrari</servlet-name>
+    <url-pattern>/ferrari</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Jaguar</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.JaguarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jaguar</servlet-name>
+    <url-pattern>/jaguar</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LandRover</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.LandRoverServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LandRover</servlet-name>
+    <url-pattern>/land-rover</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Lexus</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.LexusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Lexus</servlet-name>
+    <url-pattern>/lexus</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Mercedes</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.MercedesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Mercedes</servlet-name>
+    <url-pattern>/mercedes</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Volvo</servlet-name>
+    <servlet-class>org.prateekgupta.servlets.VolvoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Volvo</servlet-name>
+    <url-pattern>/volvo</url-pattern>
+  </servlet-mapping>
+</web-app>
+
