@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity=
+                  "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <script src="SaveValidation.js"></script>
+</head>
+<body>
+<header style="position:fixed;top:0%;right:0%;left:0%;z-index:1;
+               background-color:navy;display:flex;align-items:center;">
+    <h1 class="mr-auto ml-4 my-2" style="display:inline;color:white">User Management System</h1>
+    <a href="/Users" class="ml-auto mr-5 btn btn-outline-primary" role="button"
+       style="color:white">
+        Back to home
+    </a>
+
+</header>
+
+<div class="container">
+    <br><br>
+    <div class="row">
+
+        <div class="col-lg-6">
+
+            <form method="POST">
+                <br><br>
+                <h1><b>Registration</b></h1>
+                <br>
+
+                <div class="text-center alert" style="display:none" id="board"></div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="name_input">Name</label>
+                    </div>
+                    <div class="form-group col-8 mb-1">
+                        <input type="text" name="name" class="form-control"
+                               id="name_input" placeholder="Enter your name"
+                               onblur="validateName()">
+                        <span class="ml-2 " id="name_input_error"
+                              style="color:white">
+                            Invalid name provided
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="email_input">Email</label>
+                    </div>
+                    <div class="form-group col-8 mb-1">
+                        <input type="text" name="email" class="form-control"
+                               id="email_input" placeholder="Enter your email"
+                               onblur="validateEmail()">
+                        <span class="ml-2 " id="email_input_error"
+                              style="color:white">
+                            Invalid email provided
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="password_input">Password</label>
+                    </div>
+                    <div class="form-group col-lg-8 mb-1">
+                        <input type="password" name="password" class="form-control"
+                               id="password_input" placeholder="Enter your password"
+                               onblur="validatePassword()">
+                        <span class="ml-2 " id="password_input_error"
+                              style="color:white">
+                            Invalid password provided
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="password_input"> Confirm Password</label>
+                    </div>
+                    <div class="form-group col-lg-8 mb-1">
+                        <input type="password" name="confirm_password"
+                               class="form-control" id="confirm_password_input"
+                               onblur="validateConfirmPassword()"
+                               placeholder="Enter your password again">
+                        <span class="ml-2 " id="confirm_password_input_error"
+                              style="color:white">
+                            Passwords not matching
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="contact_number_input">Contact Number</label>
+                    </div>
+                    <div class="form-group col-8 mb-1">
+                        <input type="tel" name="contact_number" class="form-control"
+                               id="contact_number_input" onblur="validateContactNumber()"
+                               placeholder="Enter your contact number">
+                        <span class="ml-2 " id="contact_number_input_error"
+                              style="color:white">
+                            Invalid contact number provided
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="dob_input">Date of Birth</label>
+                    </div>
+                    <div class="form-group col-8 mb-1">
+                        <input type="datetime-local" name="dob"
+                               class="form-control" id="dob_input" onblur="validateDOB()"
+                               placeholder="Enter your date of birth">
+                        <span class="ml-2 " id="dob_input_error"
+                              style="color:white">
+                            Invalid date of birth provided
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4 mb-0">
+                        <label class="mb-0">Gender</label>
+                    </div>
+                    <div class="form-group col-3 mb-0">
+                        <input type="radio" name="gender" id="gender_male_input"
+                               onblur="validateGender()" value="male">
+                        <label class="mb-0" for="gender_male_input">Male</label>
+
+                    </div>
+                    <div class="form-group col-3  mb-0">
+                        <input type="radio" name="gender" id="gender_female_input"
+                               onblur="validateGender()" value="female">
+                        <label class="mb-0" for="gender_female_input">Female</label>
+                    </div>
+                    <div class="form-group col-2  mb-0">
+                        <input type="radio" name="gender" id="gender_other_input"
+                               onblur="validateGender()" value="other">
+                        <label class="mb-0" for="gender_other_input">Others</label>
+                    </div>
+
+
+                </div>
+                <div class="form-row mb-1">
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                        <span class="ml-2 " id="gender_input_error"
+                              style="color:white">
+                            Please select your gender
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4 mb-0">
+                        <label class="mb-0">Status</label>
+                    </div>
+                    <div class="form-group col-3 mb-0">
+                        <input type="checkbox" name="status" id="status_single_input"
+                               onblur="validateStatus()" value="single"
+                               onclick="selectStatus(1)">
+                        <label class="mb-0" for="status_single_input">Single</label>
+                    </div>
+                    <div class="form-group col-3 mb-0">
+                        <input type="checkbox" name="status" id="status_married_input"
+                               onblur="validateStatus()" value="married"
+                               onclick="selectStatus(2)">
+                        <label class="mb-0" for="status_married_input">Married</label>
+                    </div>
+                    <div class="form-group col-2 mb-0">
+                        <input type="checkbox" name="status" id="status_divorced_input"
+                               onblur="validateStatus()" value="divorced"
+                               onclick="selectStatus(3)">
+                        <label class="mb-0" for="status_divorced_input">Divorced</label>
+                    </div>
+                </div>
+                <div class="form-row mb-1">
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                        <span class="ml-2 " id="status_input_error"
+                              style="color:white">
+                            Please select your status
+                    </span>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="city_input">City</label>
+                    </div>
+                    <div class="form-group col-lg-8 mb-1">
+                        <input type="text" name="city" class="form-control" id="city_input"
+                               placeholder="Enter your current city name"
+                               onblur="validateCity()">
+                        <span class="ml-2 " id="city_input_error"
+                              style="color:white">
+                            Invalid city name provided
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="nationality_input">Nationality</label>
+                    </div>
+                    <div class="form-group col-lg-8 mb-1">
+                        <select id="nationality_input" class="form-control"
+                                onblur="validateNationality()" name="nationality">
+                            <option selected disabled>Select your nationality</option>
+                            <option>Indian</option>
+                            <option>Non-Indian</option>
+                        </select>
+                        <span class="ml-2 " id="nationality_input_error"
+                              style="color:white">
+                            Please select your nationality
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-outline-primary btn-block"
+                                onsubmit="validateSubmission()">
+                            Save
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="reset" class="btn btn-outline-primary btn-block">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+            <br><br>
+        </div>
+
+        <div class="col-lg-6 py-5">
+            <img src="SavePageImage.jpg"
+                 class="img-fluid w-100 h-100">
+        </div>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<footer style="background-color:black;color:white;padding:10px;text-align:center;
+            position:fixed;bottom:0%;left:0%;right:0%;">
+    @Copyright Reserved 2021
+</footer>
+</body>
+</html>

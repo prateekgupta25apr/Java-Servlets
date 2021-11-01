@@ -1,0 +1,43 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Save</servlet-name>
+    <servlet-class>org.prateekgupta.servlet.SaveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Save</servlet-name>
+    <url-pattern>/save</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GetByEmail</servlet-name>
+    <servlet-class>org.prateekgupta.servlet.GetByEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetByEmail</servlet-name>
+    <url-pattern>/get-by-email</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>org.prateekgupta.servlet.DeleteByEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdatePassword</servlet-name>
+    <servlet-class>org.prateekgupta.servlet.UpdatePasswordByEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdatePassword</servlet-name>
+    <url-pattern>/update-password-by-email</url-pattern>
+  </servlet-mapping>
+</web-app>
